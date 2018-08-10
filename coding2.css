@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #f5f5f5;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* border: 3px solid red; */
+}
+nav{
+    flex: 0 0 auto;
+    /* border: 1px solid green; */
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    background: transparent;
+    color: #2b98f0;
+    transition: color  1s ease, background 1s ease, padding 1s ease;
+}
+nav ul li a:hover{
+    color: #f5f5f5;
+    padding-left: 60px;
+    background: #2b98f0;
+}
+
+#nav-top{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 10px;
+}
+
+#nav-top h3{
+    font-size: 30px;
+    padding: 5px;
+    color: #2b98f0;
+    border: 3px solid;
+    transition: color 2s ease, background 2s ease;
+}
+
+#nav-top h3:hover{
+    background: #2b98f0;
+    color:#f5f5f5;
+}
+
+#menu-btn{
+    padding: 5px;
+    border: 2px solid #2b98f0;
+    cursor: pointer;
+    align-self: center;
+}
+
+.bar1,
+.bar2,
+.bar3{
+    width: 35px;
+    height: 5px;
+    background-color: #2b98f0;
+    margin: 5px 0;
+    transition: transform 1s ease;
+}
+
+.turn .bar1{
+    transform: rotate(-45deg) translate(-7px,6px);
+}
+.turn .bar2{
+    opacity: 0;
+}
+
+.turn .bar3{
+    transform: rotate(45deg) translate(-7px, -8px);
+}
+#banner{
+    flex: 1 0 auto;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(img/banner-img.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-box{
+    color: #f5f5f5;
+    text-align: center;
+}
+#banner-title{
+    text-transform: capitalize;
+    font-size: 60px;
+}
+.banner-underline{
+    width: 200px;
+    margin: 10px auto;
+    border: 3px solid #2b98f0;
+}
+.banner-subtitle{
+    margin: 20px 0 40px 0;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+#banner-box a{
+    display: inline-block;
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #f5f5f5;
+    background: #2b98f0;
+    border: 3px solid #2b98f0;
+    transition: background 3s ease, border 0.5s ease;
+}
+#banner-box a:hover{
+    background: transparent;
+    border: 3px solid #f5f5f5;
+}
+
+.title{
+    margin: 10px 0 40px 0;
+    cursor: pointer;
+}
+
+.title-text{
+    font-size: 60px;
+    text-transform: capitalize;
+    color: #575757;
+}
+.title-underline{
+    width: 50px;
+    border: 3px solid #2b98f0;
+    transition: width 4s ease, border 4s ease;
+}
+.title:hover .title-underline{
+    width: 200px;
+    border: 3px solid red;
+}
+
+/* ################################Skills########################## */
+
+#skills{
+    padding: 40px;
+}
+
+.skill{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.skill .fa{
+    color: #2b98f0;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 60px;
+    transition: transform 0.5s ease-in,background 0.5s ease, color 0.5s ease;
+}
+
+.skill .fas{
+    color: #2b98f0;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 60px;
+    transition: transform 0.5s ease-in,background 0.5s ease,color 0.5s ease;
+}
+
+
+.skill .fa:hover{
+    transform: scale(0.7);
+    background: #2b98f0;
+    color: #f5f5f5;
+}
+
+.skill .fas:hover{
+    transform: scale(0.7);
+    background: #2b98f0;
+    color: #f5f5f5;
+}
+
+.skill h3{
+    margin: 10px 0 15px 0;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #2b98f0;
+}
+
+.skill p{
+    line-height: 1.5;
+    width: 75%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:576px){
+    .skills-center{
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 90vw;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .skill{
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+
+@media screen and (min-width:992px){
+   
+    .skill{
+        flex: 0 1 calc(25% - 10px);
+    }
+}
